@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook - Log in or Sign up</title>
+
+    <link rel="stylesheet" href="../../public/styles/login.css" />
+    <link
+      rel="shortcut icon"
+      href="../../public/assets/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>
+          <img
+            src="../../public/assets/facebook-logo.svg"
+            alt="facebook logo (page title)"
+          />
+        </h1>
+
+        <h2>Connect with friends and the world around you on Facebook</h2>
+      </div>
+
+      <form action="../../../backend/login.php" method="post">
+        <input type="email" name="email" placeholder="Email or phone number" />
+        <input type="password" name="password" placeholder="Password " />
+        <input type="submit" value="Log in" onclick="sendValues(event)"/>
+
+        <a href="#">Forgot password ?</a>
+
+        <span class="separator"></span>
+
+        <button><a href="../pages/register.html">Create new account</a></button>
+      </form>
+    </main>
+
+    <div id="erros">
+      <img src="../../public/assets/close.png" alt="close icon" onclick="closeWidow()">
+
+      <h1>ERROS:</h1>
+    </div>
+
+    <script src="../javascript/login.js"></script>
+  </body>
+</html>

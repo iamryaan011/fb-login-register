@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook - Log in or Sign up</title>
+
+    <link rel="stylesheet" href="../../public/styles/register.css" />
+    <link
+      rel="shortcut icon"
+      href="../../public/assets/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Create a new account</h1>
+      <h2>It’s quick and easy.</h2>
+
+      <div class="separator"></div>
+
+      <form action="../../../backend/register.php" method="post">
+        <input type="text" name="first_name" placeholder="First Name" />
+        <input type="text" name="last_name" placeholder="Last Name" />
+
+        <span>Birthday</span>
+        <select name="month" id="month">
+          <option value="select-month">Select Month</option>
+          <option value="jan">Jan</option>
+          <option value="fev">Fev</option>
+          <option value="mar">Mar</option>
+          <option value="jun">Jun</option>
+          <option value="jul">Jul</option>
+          <option value="aug">Aug</option>
+          <option value="sep">Sep</option>
+          <option value="oct">Oct</option>
+          <option value="nov">Nov</option>
+          <option value="dec">Dec</option>
+        </select>
+        <select name="day" id="day">
+          <option value="select-day">Select Day</option>
+        </select>
+        <select name="year" id="year">
+          <option value="select-year">Select Year</option>
+        </select>
+
+        <span>Gender</span>
+        <label for="female"
+          >Female<input type="radio" name="gender" id="female" value="female"
+        /></label>
+        <label for="male"
+          >Male<input type="radio" name="gender" id="male" value="male"
+        /></label>
+        <label for="custom"
+          >Custom<input type="radio" name="gender" id="custom" value="custom"
+        /></label>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Mobile number or email"
+          id="email"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="New password"
+          id="password"
+        />
+
+        <p>
+          People who use our service may have uploaded your contact information
+          to Facebook. <a href="#">Learn more</a>.
+        </p>
+
+        <p>
+          By clicking Sign Up, you agree to our
+          <a href="#">Terms, Privacy Policy</a> and
+          <a href="#">Cookies Policy</a>. You may receive SMS Notifications from
+          us and can opt out any time.
+        </p>
+
+        <input type="submit" value="Sign Up" onclick="sendValues(event)" />
+
+        <a href="../pages/login.html" id="already-signIn"
+          >Already have an account ?</a
+        >
+      </form>
+    </main>
+
+    <div id="erros">
+      <img src="../../public/assets/close.png" alt="close icon" onclick="closeWidow()">
+
+      <h1>ERROS:</h1>
+    </div>
+
+    <script src="../javascript/register.js"></script>
+  </body>
+</html>

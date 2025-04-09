@@ -1,0 +1,320 @@
+:root {
+  --backgroundColor: #f2f4f7;
+  --logInButton: #0866ff;
+  --signUpButton: #42b72a;
+  --inputColorA: #cacaca;
+  --inputColorB: #8d8d8d;
+  --linkColor: #385898;
+}
+
+/* configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  line-height: 1.6;
+
+  background-color: var(--backgroundColor);
+
+  overflow-x: hidden;
+}
+
+main span {
+  display: block;
+
+  text-align: left;
+
+  color: var(--inputColorB);
+
+  font-size: 12px;
+
+  margin: 12px 0 4px 0;
+
+  cursor: default;
+}
+
+input::placeholder {
+  color: var(--inputColorB);
+}
+
+form input[type="email"]:focus,
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form select:focus,
+form label:focus {
+  border: 1px solid #0866ff;
+  outline: 2px solid #0867ff27;
+}
+
+form input[type="email"],
+form input[type="text"],
+form input[type="password"],
+form select,
+form label {
+  font-size: 15px;
+
+  line-height: 16px;
+  height: 38px;
+
+  padding: 10px;
+
+  border-radius: 5px;
+  border: 1px solid var(--inputColorA);
+}
+
+form input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: var(--inputColorA);
+}
+
+form #email,
+#password {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 12px;
+}
+
+h1 {
+  margin-top: 8px;
+
+  font-size: 25px;
+}
+
+/* configurações do main */
+
+main {
+  text-align: center;
+
+  border-radius: 8px;
+  background-color: #fff;
+
+  width: 450px;
+  height: auto;
+
+  box-shadow: 0px 0px 4px 2px #00000014;
+}
+
+h2 {
+  color: var(--inputColorB);
+
+  font-size: 15px;
+  font-weight: lighter;
+
+  margin-bottom: 12px;
+
+  text-align: center;
+}
+
+.separator {
+  width: 100%;
+
+  border-bottom: 1px solid #cacaca;
+}
+
+/* configurações do formulário */
+
+form {
+  margin: 0px auto 24px auto;
+  padding: 0px 20px 0px 0px;
+
+  background-color: #fff;
+
+  padding: 10px 16px;
+
+  width: 450px;
+  height: 500px;
+}
+
+form input[type="text"] {
+  width: 207px;
+
+  margin-top: 12px;
+}
+
+form input[type="email"]:nth-child(1) {
+  margin-right: 4px;
+}
+
+form input[type="email"]::placeholder {
+  text-align: left;
+
+  color: var(--inputColorA);
+}
+
+form select {
+  display: inline-block;
+
+  width: 32.7%;
+
+  appearance: none;
+
+  background-image: url("../assets/arrow-down.png");
+  background-position: right 5px center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+
+  padding: 0 8px;
+  padding-right: 20px;
+}
+
+form label {
+  display: inline-flex;
+
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px;
+
+  width: 32.7%;
+
+  text-align: left;
+}
+
+form p {
+  color: #777;
+
+  font-size: 11px;
+
+  text-align: justify;
+}
+
+form p a {
+  color: var(--linkColor);
+
+  text-decoration: none;
+}
+
+form p a:hover {
+  text-decoration: underline;
+}
+
+form p:first-of-type {
+  margin: 12px 0 4px 0;
+}
+
+form input[type="submit"] {
+  display: block;
+
+  background-color: var(--signUpButton);
+
+  border: none;
+  border-radius: 6px;
+
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  height: 36px;
+  width: 194px;
+
+  padding: 0 32px;
+  margin: 12px auto;
+
+  cursor: pointer;
+}
+
+form input[type="submit"]:active {
+  position: relative;
+
+  top: 1.25px;
+}
+
+form #already-signIn {
+  font-size: 16px;
+  font-weight: normal;
+
+  text-decoration: none;
+
+  color: #0866ff;
+}
+
+/* campo de erros */
+
+#erros {
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  z-index: 999;
+
+  margin: 0 auto;
+  padding: 16px 16px 32px 16px;
+
+  background-color: #ff0000;
+
+  position: absolute;
+
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0px 0px 4px 2px #0000004d;
+
+  width: 315px;
+}
+
+#erros img {
+  height: 24px;
+
+  cursor: pointer;
+
+  position: relative;
+
+  left: 93%;
+  top: -11px;
+}
+
+#erros h1 {
+  font-size: 16px;
+  font-weight: 800;
+
+  color: #fff;
+
+  margin: 0;
+
+  position: relative;
+  top: -10px;
+}
+
+#erros p {
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  margin: 4px 0;
+}

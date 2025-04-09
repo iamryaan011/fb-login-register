@@ -1,0 +1,327 @@
+:root {
+  --backgroundColor: #f2f4f7;
+  --logInButton: #0866ff;
+  --signUpButton: #42b72a;
+  --inputColorA: #d8d8d8;
+  --inputColorB: #8d8d8d;
+}
+
+/* configurações globais */
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  line-height: 1.6;
+
+  background-color: var(--backgroundColor);
+
+  overflow-x: hidden;
+}
+
+/* configurações do form */
+
+main {
+  display: grid;
+
+  grid-template-columns: 500px 500px;
+
+  position: relative;
+
+  left: 8%;
+  top: 18px;
+}
+
+main div {
+  text-align: left;
+
+  position: relative;
+
+  right: 125px;
+
+  width: 590px;
+
+  padding-left: 75px;
+}
+
+div h1 {
+  text-align: left;
+}
+
+div h1 > img {
+  position: relative;
+
+  right: 6%;
+  top: 24px;
+
+  height: 106px;
+}
+
+div h2 {
+  font-size: 28px;
+  font-weight: normal;
+
+  line-height: 28px;
+}
+
+form {
+  box-shadow: 0px 2px 4px #0000001a, 0px 8px 16px #0000001a;
+
+  background-color: #fff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 380px;
+
+  border-radius: 8px;
+
+  padding: 16px 0px;
+
+  position: relative;
+  bottom: 24px;
+}
+
+form input[type="email"],
+input[type="password"] {
+  padding: 14px 16px;
+  font-size: 17px;
+
+  width: 330px;
+
+  margin: 6px 0;
+
+  border-radius: 6px;
+  border: 1px solid var(--inputColorA);
+}
+
+form input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #0866ff;
+  outline: 2px solid #0867ff27;
+}
+
+form input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: var(--inputColorB);
+}
+
+form input[type="submit"] {
+  background-color: var(--logInButton);
+  color: #fff;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  line-height: 48px;
+
+  padding: 0 16px;
+  margin-top: 8px;
+
+  width: 332px;
+
+  cursor: pointer;
+}
+
+form a {
+  color: #0866ff;
+
+  font-size: 14px;
+
+  margin: 12px 0;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  width: 90%;
+
+  border-bottom: 1px solid #dfdfdf;
+
+  margin-bottom: 16px;
+}
+
+form button {
+  background-color: transparent;
+
+  border: none;
+}
+
+form button > a {
+  color: #fff;
+
+  background-color: var(--signUpButton);
+  color: #fff;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  line-height: 48px;
+
+  padding: 16px;
+  margin-top: 8px;
+
+  cursor: pointer;
+}
+
+form button > a:hover {
+  text-decoration: none;
+}
+
+/* campo de erros */
+#erros {
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  z-index: 999;
+
+  margin: 0 auto;
+  padding: 16px 16px 32px 16px;
+
+  background-color: #ff0000;
+
+  position: absolute;
+
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0px 0px 4px 2px #0000004d;
+
+  width: 315px;
+}
+
+#erros img {
+  height: 24px;
+
+  cursor: pointer;
+
+  position: relative;
+
+  left: 93%;
+  top: -11px;
+}
+
+#erros h1 {
+  font-size: 16px;
+  font-weight: 800;
+
+  color: #fff;
+
+  margin: 0;
+
+  position: relative;
+  top: -10px;
+}
+
+#erros p {
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  margin: 4px 0;
+}
+
+/* media queries */
+
+@media (max-width: 1070px) {
+  main div {
+    width: 435px;
+  }
+
+  div h2 {
+    font-size: 24px;
+    font-weight: normal;
+  
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 990px) {
+  main {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+  }
+
+  main div {
+    position: relative;
+
+    bottom: 56px;
+    left: -10%;
+
+    width: 415px;
+
+    text-align: center;
+  }
+
+  div h2 {
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  div h1 > img {
+    height: 90px;
+
+    left: 7%;
+
+    margin: 8px 0;
+  }
+
+  #erros {
+    top: 19%;
+  }
+}

@@ -1,0 +1,97 @@
+:root {
+  --backgroundColor: #f2f4f7;
+  --logInButton: #0866ff;
+  --signUpButton: #42b72a;
+  --inputColorA: #d8d8d8;
+  --inputColorB: #8d8d8d;
+  --mainBackgroundColor: #475a96;
+}
+
+/* configurações globais */
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  line-height: 1.6;
+
+  background-color: var(--backgroundColor);
+
+  overflow-x: hidden;
+}
+
+/* header */
+
+header {
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+  background-color: var(--mainBackgroundColor);
+}
+
+header span > img {
+  height: 96px;
+}
+
+header nav {
+  margin-right: 36px;
+}
+
+header nav > a {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #fff;
+
+  text-decoration: none;
+}
+
+header nav > a:hover {
+  text-decoration: underline;
+}
+
+/* main */
+
+main {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+}
+
+main h1 {
+    color: var(--mainBackgroundColor);
+
+    font-weight: 800;
+    font-size: 24px;
+
+    text-shadow: 0px 2px 1px #00000029;
+}
