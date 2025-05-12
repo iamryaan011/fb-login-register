@@ -61,7 +61,4 @@ pokewild/
 <br/>Email: iamryaan011@gmail.com 
 <br/>Linkedin: <a href="linkedin.com/in/ryanlima011">linkedin.com/in/ryanlima011 </a>
 
-## API utilizada:
-PokeAPI: <a href="https://pokeapi.co">https://pokeapi.co/</a>
-
 
