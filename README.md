@@ -43,17 +43,11 @@ Execute o projeto:
 Abra http://localhost/fb-login-register no seu navegador
 
 ## ✨ Funcionalidades
-<br/>Sistema de "login", iniciando apenas quando você digitar um username;
+<br/>Sistema de login pedindo email e senha do usuário;
 
-<br/>Gera um pokémon aleatório na tela a cada refresh;
+<br/>Caso o usuário não exista, surge um alert e o usuário é direcionado para a página de register;
 
-<br/>Captura dos pokémon com diferentes tipos de pokebolas;
-
-<br/>Chance maior ou menor de acordo com a pokebola;
-
-<br/>Geração do seu time (6 pokémon máximos);
-
-<br/>Pokedex listando todos os pokémon da região;
+<br/>Quando a conta for criada, é direcionado para a home;
 
 ## 📁 Estrutura de Pastas
 A estrutura do projeto segue sendo algo bem simples e "entendível" separando a lógica do backend e do frontend
