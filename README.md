@@ -1,4 +1,4 @@
-# Pokewild
+# Facebook Login e Register
 Um sistema de login simples inspirado no Facebook
 
 ## 🛠️ Tecnologias Utilizadas
