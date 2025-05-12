@@ -52,7 +52,7 @@ Abra http://localhost/fb-login-register no seu navegador
 ## 📁 Estrutura de Pastas
 A estrutura do projeto segue sendo algo bem simples e "entendível" separando a lógica do backend e do frontend
 
-pokewild/
+fb-login-register/
 <br/>├── backend/
 <br/>├── frontend
 
